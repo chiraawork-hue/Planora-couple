@@ -180,6 +180,54 @@ small,.muted{color:#625d5c}
  .app{width:100%;max-width:none;margin:0}
  #workspace{max-width:none}
 }
+</style><style id="pc-beige-desktop-v16">
+/* Beige navigation, clear active state and comfortable rounded desktop typography. */
+#pcSideMenu{background:#f6efe6!important;border-right:1px solid #e6d7c8!important;padding:27px 17px!important}
+.pc-menu-head{padding:3px 5px 0}.pc-menu-head strong{font-size:21px!important;font-weight:850!important;letter-spacing:-.035em;color:#751a32!important}
+.pc-menu-sub{font-size:13px!important;color:#856c64!important;margin:8px 5px 26px!important}
+.pc-menu-group{font-size:11px!important;letter-spacing:.12em!important;color:#9a786d!important;margin:17px 12px 8px!important}
+.pc-menu-links{gap:7px!important}
+.pc-menu-links button{font-size:15px!important;font-weight:700!important;min-height:57px!important;border-radius:15px!important;padding:9px 13px!important;gap:14px!important;color:#352b2c!important;background:transparent!important}
+.pc-menu-links button .pc-ico{width:40px!important;height:40px!important;min-width:40px!important;background:#fffaf5!important;border-radius:14px!important;color:#8c5260!important}
+.pc-menu-links button .pc-line-icon{width:22px!important;height:22px!important;stroke-width:1.9!important}
+.pc-menu-links button.pc-selected{background:#742f49!important;color:#fff!important}
+.pc-menu-links button.pc-selected .pc-ico{background:#ffffff25!important;color:#fff!important}
+.pc-menu-links button.pc-selected .pc-line-icon{color:#fff!important}
+.pc-menu-links button:not(.pc-selected):hover{background:#ece0d4!important}
+.pc-menu-links button:not(.pc-selected):hover .pc-ico{background:#fff!important}
+.pc-menu-foot{color:#94776d!important;border-top:1px solid #e1d0c1!important;font-size:12px!important}
+.pc-menu-head button{font-size:22px!important}
+@media(min-width:1200px){
+ body{--pc-desktop-sidebar:304px}
+ #pcSideMenu{width:304px!important}
+ .app{padding:30px clamp(28px,3.4vw,68px) 65px!important}
+ .brand{font-size:24px!important}
+ header small{font-size:13px!important}
+ #workspace{font-size:16px!important;line-height:1.55}
+ #workspace h2{font-size:clamp(25px,2vw,31px)!important;line-height:1.2}
+ #workspace h3{font-size:19px!important;line-height:1.35}
+ #workspace small,#workspace .muted{font-size:13px!important}
+ #workspace .card{padding:23px!important;border-radius:21px!important}
+ #workspace button{font-size:14px}
+ #workspace input,#workspace select,#workspace textarea{font-size:15px!important}
+ #workspace .planner-view-tabs button{font-size:14px!important}
+ #workspace .me-tabs button{font-size:13px!important}
+ #workspace .me-doc span,#workspace .me-step-head{font-size:14px!important}
+ #workspace .me-intro{font-size:14px!important}
+ #workspace .me-note{font-size:12px!important}
+}
+@media(min-width:768px) and (max-width:1199px){
+ #pcSideMenu{width:min(340px,84vw)!important}
+ .pc-menu-links button{font-size:14px!important}
+ #workspace{font-size:15px}
+}
+@media(max-width:767px){
+ #pcSideMenu{padding:22px 14px!important}
+ .pc-menu-head strong{font-size:19px!important}
+ .pc-menu-links button{font-size:13px!important;min-height:50px!important}
+ .pc-menu-links button .pc-ico{width:35px!important;height:35px!important;min-width:35px!important}
+ .pc-menu-links button .pc-line-icon{width:19px!important;height:19px!important}
+}
 </style></head><body><main class="app"><header><div class="pc-brandline"><button type="button" class="pc-menu-toggle" onclick="pcToggleMenu()" aria-label="Buka menu navigasi">☰</button><div><div class="brand">♡ Planora Couple</div><small>Planning Our Wedding</small></div></div><button class="alt small" onclick="settings()">⚙ Settings</button></header>
 <div id="pcMenuBackdrop" onclick="pcToggleMenu(false)"></div><aside id="pcSideMenu" aria-label="Menu Planora Wedding"><div class="pc-menu-head"><strong>♡ Planora Couple</strong><button type="button" onclick="pcToggleMenu(false)" aria-label="Tutup menu">✕</button></div><p class="pc-menu-sub">Planning Our Wedding</p><div class="pc-menu-links"><div class="pc-menu-group">Overview</div><button type="button" data-pc-page="Home"  onclick="pcGo('Home')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/><path d="M9 21v-7h6v7"/></svg></span><span>Home</span></button><button type="button" data-pc-page="Accounts"  onclick="pcGo('Accounts')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M3 10h18M7 6V4h10v2"/><circle cx="17" cy="15.5" r="1"/></svg></span><span>Accounts</span></button><button type="button" data-pc-page="Transactions"  onclick="pcGo('Transactions')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h15m-4-4 4 4-4 4M20 17H5m4-4-4 4 4 4"/></svg></span><span>Transactions</span></button><button type="button" data-pc-page="Budget"  onclick="pcGo('Budget')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 16v-4m4 4V8m4 8v-6"/></svg></span><span>Wedding Budget</span></button><div class="pc-menu-group">Wedding Planning</div><button type="button" data-pc-page="Planner" onclick="pcGo('Planner','checklist')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="3"/><path d="m8 12 3 3 5-6M8 7h5"/></svg></span><span>Wedding Planner</span></button><button type="button" data-pc-page="Guests"  onclick="pcGo('Guests')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><span>Our Guests</span></button></div><div class="pc-menu-foot">One step closer to forever ♡</div></aside><section id="setup" class="section"><h2>Planning Our Wedding 💍</h2><p class="muted">Mulai perjalanan persiapan pernikahan kalian bersama Planora.</p><div class="card" id="setupDetails"><h3 id="setupHeading"></h3><label>Your name</label><input id="n1" value="Chira"><label>Partner name</label><input id="n2" value="Partner"><div id="weddingDateField"><label>Wedding date</label><input id="wed" type="date"></div><label id="goalCaption">Savings target (Rp)</label><input id="goal" type="number" value="100000000"><label>Initial savings (Rp)</label><input id="initial" type="number" value="0"><p><button onclick="start()">Start Our Journey →</button></p></div></section>
 <section id="workspace" class="section"><div class="flex"><div><h2 id="heading">Our Journey</h2><small id="couple"></small></div><span class="wedding-only-label" style="font-size:12px;color:#d62f83;font-weight:750">💍 Wedding</span></div>
