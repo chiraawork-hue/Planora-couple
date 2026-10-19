@@ -155,6 +155,31 @@ small,.muted{color:#625d5c}
 .planner-category-icon{border-radius:15px!important}
 .planner-category-card{border-radius:17px!important}
 @media(hover:hover){.pc-menu-links button:active{transform:scale(.985)}}
+</style><style id="pc-full-desktop-v15">
+/* True full-width desktop shell; keep mobile and tablet responsive. */
+@media(min-width:1200px){
+ html,body{width:100%;min-width:0;background:#fff!important}
+ body{--pc-desktop-sidebar:284px}
+ body.pc-desktop-collapsed{--pc-desktop-sidebar:0px}
+ .app{width:calc(100% - var(--pc-desktop-sidebar))!important;max-width:none!important;margin:0 0 0 var(--pc-desktop-sidebar)!important;padding:24px clamp(24px,3vw,64px) 60px!important;min-height:100vh;transition:margin-left .22s ease,width .22s ease}
+ #workspace{max-width:none!important;width:100%!important;margin:0!important}
+ #pcSideMenu{width:284px!important;transform:none!important;box-shadow:none!important;border-right:1px solid #ece2da!important;transition:transform .22s ease!important}
+ body.pc-desktop-collapsed #pcSideMenu{transform:translateX(-110%)!important}
+ #pcMenuBackdrop{display:none!important}
+ body.pc-menu-open #pcMenuBackdrop{display:none!important}
+ header{width:100%}
+ #workspace>.section,#workspace>.card{max-width:none}
+ .pc-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+ .pc-menu-head button{display:inline-flex}
+}
+@media(min-width:768px) and (max-width:1199px){
+ .app{width:100%!important;max-width:none!important;margin:0!important;padding:22px clamp(20px,3vw,38px) 45px!important}
+ #workspace{max-width:none!important;width:100%!important;margin:0!important}
+}
+@media(max-width:767px){
+ .app{width:100%;max-width:none;margin:0}
+ #workspace{max-width:none}
+}
 </style></head><body><main class="app"><header><div class="pc-brandline"><button type="button" class="pc-menu-toggle" onclick="pcToggleMenu()" aria-label="Buka menu navigasi">☰</button><div><div class="brand">♡ Planora Couple</div><small>Planning Our Wedding</small></div></div><button class="alt small" onclick="settings()">⚙ Settings</button></header>
 <div id="pcMenuBackdrop" onclick="pcToggleMenu(false)"></div><aside id="pcSideMenu" aria-label="Menu Planora Wedding"><div class="pc-menu-head"><strong>♡ Planora Couple</strong><button type="button" onclick="pcToggleMenu(false)" aria-label="Tutup menu">✕</button></div><p class="pc-menu-sub">Planning Our Wedding</p><div class="pc-menu-links"><div class="pc-menu-group">Overview</div><button type="button" data-pc-page="Home"  onclick="pcGo('Home')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/><path d="M9 21v-7h6v7"/></svg></span><span>Home</span></button><button type="button" data-pc-page="Accounts"  onclick="pcGo('Accounts')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M3 10h18M7 6V4h10v2"/><circle cx="17" cy="15.5" r="1"/></svg></span><span>Accounts</span></button><button type="button" data-pc-page="Transactions"  onclick="pcGo('Transactions')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h15m-4-4 4 4-4 4M20 17H5m4-4-4 4 4 4"/></svg></span><span>Transactions</span></button><button type="button" data-pc-page="Budget"  onclick="pcGo('Budget')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 16v-4m4 4V8m4 8v-6"/></svg></span><span>Wedding Budget</span></button><div class="pc-menu-group">Wedding Planning</div><button type="button" data-pc-page="Planner" onclick="pcGo('Planner','checklist')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="3"/><path d="m8 12 3 3 5-6M8 7h5"/></svg></span><span>Wedding Planner</span></button><button type="button" data-pc-page="Guests"  onclick="pcGo('Guests')"><span class="pc-ico"><svg class="pc-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></svg></span><span>Our Guests</span></button></div><div class="pc-menu-foot">One step closer to forever ♡</div></aside><section id="setup" class="section"><h2>Planning Our Wedding 💍</h2><p class="muted">Mulai perjalanan persiapan pernikahan kalian bersama Planora.</p><div class="card" id="setupDetails"><h3 id="setupHeading"></h3><label>Your name</label><input id="n1" value="Chira"><label>Partner name</label><input id="n2" value="Partner"><div id="weddingDateField"><label>Wedding date</label><input id="wed" type="date"></div><label id="goalCaption">Savings target (Rp)</label><input id="goal" type="number" value="100000000"><label>Initial savings (Rp)</label><input id="initial" type="number" value="0"><p><button onclick="start()">Start Our Journey →</button></p></div></section>
 <section id="workspace" class="section"><div class="flex"><div><h2 id="heading">Our Journey</h2><small id="couple"></small></div><span class="wedding-only-label" style="font-size:12px;color:#d62f83;font-weight:750">💍 Wedding</span></div>
@@ -381,7 +406,7 @@ else{p.innerHTML='<p class="me-intro">Periksa prosedur dan persyaratan terbaru d
 };window.marriageTab('vault');
 })();
 </script><script>
-function pcToggleMenu(force){document.body.classList.toggle('pc-menu-open',typeof force==='boolean'?force:!document.body.classList.contains('pc-menu-open'))}
+function pcToggleMenu(force){if(window.matchMedia('(min-width:1200px)').matches){const collapsed=document.body.classList.contains('pc-desktop-collapsed');document.body.classList.toggle('pc-desktop-collapsed',typeof force==='boolean'?!force:!collapsed);document.body.classList.remove('pc-menu-open');return}document.body.classList.toggle('pc-menu-open',typeof force==='boolean'?force:!document.body.classList.contains('pc-menu-open'))}
 function pcGo(dest,tab,anchor){pcToggleMenu(false);page(dest);if(tab&&typeof switchPlannerTab==='function')switchPlannerTab(tab);document.querySelectorAll('[data-pc-page]').forEach(b=>b.classList.toggle('pc-selected',b.dataset.pcPage===dest&&(b.dataset.pcTab?b.dataset.pcTab===(anchor?'essentials':tab):!tab)));if(anchor){setTimeout(function(){const e=document.getElementById(anchor);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})},80)}}
 </script><script>
 function pcToggleDocs(){const b=document.getElementById('pcDocsToggle'),c=document.getElementById('pcDocsChildren');const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));c.hidden=!open}
